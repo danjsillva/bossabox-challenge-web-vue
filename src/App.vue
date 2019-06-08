@@ -1,31 +1,41 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+  <div class="container">
+    <header class="App-header my-5">
+      <h1 class="font-weight-bold">VUTTR</h1>
+      <h2 class="text-muted">Very Useful Tools to Remember</h2>
+    </header>
+
+    <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css");
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: normal;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.container {
+  max-width: 720px !important;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.modal-wrapper {
+  width: 560px !important;
+  max-height: 85vh;
+  margin: 72px auto !important;
+  overflow: auto;
+}
+.modal-container {
+  position: fixed !important;
+  z-index: 10 !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  transition: opacity 0.3s ease !important;
 }
 </style>
