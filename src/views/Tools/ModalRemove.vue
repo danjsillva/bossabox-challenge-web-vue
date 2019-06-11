@@ -9,7 +9,7 @@ export default {
     <div class="modal-wrapper card">
       <div class="card-body bt">
         <slot name="body">
-          <h4>
+          <h4 class="font-weight-bold">
             <i class="fa fa-times mr-3"/> Remove tool
           </h4>
 
@@ -20,7 +20,7 @@ export default {
 
           <div class="form-row">
             <div class="col-3 offset-6">
-              <button class="btn btn-secondary btn-block" @click="$emit('onCancel')">Cancel</button>
+              <button class="btn btn-outline-primary btn-block" @click="$emit('onCancel')">Cancel</button>
             </div>
             <div class="col-3">
               <button
